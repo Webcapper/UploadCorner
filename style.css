@@ -1,0 +1,45 @@
+#nav a
+{
+    text-align:center;
+    background: #00BFFF;
+    padding: 0.5% 6%;
+    text-decoration: none;
+    color: #5C057C;
+    border-radius:12px;
+    box-shadow:3px 3px 3px rgba(128,128,128,2);
+     font-size: 150%;
+    
+}
+
+#nav a:hover
+{
+    text-align:center;
+    background: #C48C09;
+    padding: 0.5% 6%;
+    text-decoration: none;
+    color: #5C057C;
+    border-radius:12px;
+    box-shadow:3px 3px 3px rgba(128,128,128,2);
+    font-size: 150%;
+    
+}
+
+#body
+{
+    background:#87CEEB;
+}
+
+#head
+{
+  text-align: center;
+  text-decoration: bold;
+  font-size: 500%;
+  color:#470FFD;
+}
+
+#st
+{
+ padding: 0.5% 8%;
+ box-shadow:3px 3px 3px rgba(128,128,128,2);
+    font-size: 150%;
+}
