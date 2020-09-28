@@ -1,5 +1,5 @@
 # UploadCorner
-A file hosting website
+A Open-File Hosting website
 
 ## Live At:
 http://uploadcorner.dx.am/
