@@ -1,6 +1,15 @@
 <?php
 $page='<html>
   <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145378502-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "UA-145378502-1");
+</script>
    <link rel="stylesheet" href="videostyle.css">
      <title>Upload Centre</title>
     <p id="head">VIDEO CENTRE</p>
@@ -13,6 +22,13 @@ $page='<html>
   <a href="picture.php">Picture</a>
   <a href="file.php">File</a>
   </nav>
+  <br><br><br>
+  <script type="text/javascript" language="javascript">
+      var aax_size="728x90";
+      var aax_pubname = "prskid1000-21";
+      var aax_src="302";
+    </script>
+    <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
    <div>
   <form action="videoupload.php" method="post" enctype="multipart/form-data">
   <br><br>
@@ -30,7 +46,12 @@ $page='<html>
 </form>
   </div>
   <div id="a1">VIDEOS</div>';
- $end=' </body>
+ $end=' <br><br><br> <script type="text/javascript" language="javascript">
+      var aax_size="728x90";
+      var aax_pubname = "prskid1000-21";
+      var aax_src="302";
+    </script>
+    <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script></body>
 </html>';
 
 include('dbini.php');

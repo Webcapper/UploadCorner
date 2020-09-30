@@ -1,0 +1,40 @@
+<?php
+$mysqli=new mysqli("fdb21.awardspace.net","2734291_data","HATSoff@2018","2734291_data","3306");
+?> 
+
+<?php
+include('custom.php');
+include('dbini.php');
+$query="INSERT INTO commenttable(id,author,title,commenter,comment) VALUES ('NULL','".$_POST['author']."','".$_POST['title']."','".$_POST['user']."','".$_POST['answer']."')";
+$result=$mysqli->query($query);
+$mysqli->close();
+include('getpost.php');
+exit();
+?>
+
+<?php
+include('dbini.php');
+$query="SELECT * FROM commenttable WHERE author='".$_POST["author"]."' AND title='".$_POST["title"]."'";
+$result=$mysqli->query($query);
+$comments="";
+while($row =$result->fetch_assoc()) 
+{
+$commenter=$row['commenter'];
+$comment=$row['comment'];
+$comments .='<div class="media mb-4">
+<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/20x20" alt="">
+<div class="media-body">
+<h4 class="mt-0">Answered by </h4><h5>'.$commenter.'</h5><h6>'.$comment.'   
+</h5></div></div>';
+}
+$smarty->assign("comment",$comments);
+?>
+
+<?php
+include('custom.php');
+include('dbini.php');
+$query="INSERT INTO posttable(id,author,title, post,ptime,pdate) VALUES ('NULL','".$_COOKIE['user']."','".$_POST['title']."','".$_POST['post']."',CURTIME(),CURDATE())";
+$result=$mysqli->query($query);
+$mysqli->close();
+header('Location:page6.php');
+?>
